@@ -74,7 +74,7 @@ const colors = [
 let soundEnabled = false;
 let collisionSoundEnabled = false;
 
-const clap = new Audio('./audios/clap.mp3');
+const clap = new Audio('./assets/audios/clap.mp3');
 clap.currentTime = 0;
 clap.volume = 0.1;
 
@@ -83,7 +83,7 @@ const getFileName = (index) => {
 }
 
 const getURL = (index) => {
-     return `./audios/bell/${getFileName(index)}.mp3`;
+     return `./assets/audios/bell/${getFileName(index)}.mp3`;
 }
 
 const keys = [];
@@ -100,29 +100,6 @@ const playKey = (index) => {
      keys[index].play();
 }
 
-// BASS
-const bass = [];
-const c0 = new Audio('./audios/bass/bass-c0.mp3');
-const d0 = new Audio('./audios/bass/bass-d0.mp3');
-const e0 = new Audio('./audios/bass/bass-e0.mp3');
-const f0= new Audio('./audios/bass/bass-f0.mp3');
-const g0 = new Audio('./audios/bass/bass-g0.mp3');
-const a0 = new Audio('./audios/bass/bass-a0.mp3');
-const b0 = new Audio('./audios/bass/bass-b0.mp3');
-const c1 = new Audio('./audios/bass/bass-c1.mp3');
-const d1 = new Audio('./audios/bass/bass-d1.mp3');
-const e1 = new Audio('./audios/bass/bass-e1.mp3');
-const f1 = new Audio('./audios/bass/bass-f1.mp3');
-const g1 = new Audio('./audios/bass/bass-g1.mp3');
-const a1 = new Audio('./audios/bass/bass-a1.mp3');
-const b1 = new Audio('./audios/bass/bass-b1.mp3');
-const c2 = new Audio('./audios/bass/bass-c2.mp3');
-
-bass.push(c0, d0, e0, f0, g0, a0, b0, c1, c2, a1, b1, d1, e1, f1, g1);
-bass.forEach(key => {
-     key.currentTime = 0;
-     key.volume = 0.2;
-})
 
 ///// Init Variables /////
 // THREE //
@@ -130,9 +107,9 @@ let scene, camera, renderer, orbitControls;
 let cameraFront, cameraTop, insetWidth, insetHeight;
 
 const textureLoader = new THREE.TextureLoader();
-const space = textureLoader.load('./textures/galaxy1.jpg');
-const metalTextureColor = textureLoader.load('./textures/metal/Metal043A_1K_Color.jpg');
-const metalTextureRoughness = textureLoader.load('./textures/metal/Metal043A_1K_Roughness.jpg');
+const space = textureLoader.load('./assets/images/galaxy1.jpg');
+const metalTextureColor = textureLoader.load('./assets/textures/Metal043A_1K_Color.jpg');
+const metalTextureRoughness = textureLoader.load('./assets/textures/Metal043A_1K_Roughness.jpg');
 
 // For Collision detect Sound //
 // point circles//
@@ -2071,7 +2048,7 @@ function checkCollision(){
                     clap.currentTime = 0;
                     let index = Math.floor(Math.random() * 21);
                     clap.play();
-                    bass[index].play();
+                    
                     gsap.to(balls[index].position, {y: 2, duration: 0.12, ease: 'power0.inOut'});
                          gsap.to(balls[index].position, {y: 0, delay: 0.12, duration: 0.25, ease: 'power0.inOut'});
                          gsap.to(cylinders[index].scale, {y: 2.5, duration: 0.12, ease: 'power0.inOut'});
@@ -2081,7 +2058,7 @@ function checkCollision(){
                clap.currentTime = 0;
                let index = Math.floor(Math.random() * 21);
                     clap.play();
-                    bass[index].play();
+                    
                     gsap.to(balls[index].position, {y: 2, duration: 0.12, ease: 'power0.inOut'});
                          gsap.to(balls[index].position, {y: 0, delay: 0.12, duration: 0.25, ease: 'power0.inOut'});
                          gsap.to(cylinders[index].scale, {y: 2.5, duration: 0.12, ease: 'power0.inOut'});
@@ -2091,7 +2068,7 @@ function checkCollision(){
                clap.currentTime = 0;
                let index = Math.floor(Math.random() * 21);
                     clap.play();
-                    bass[index].play();
+                    
                     gsap.to(balls[index].position, {y: 2, duration: 0.12, ease: 'power0.inOut'});
                          gsap.to(balls[index].position, {y: 0, delay: 0.12, duration: 0.25, ease: 'power0.inOut'});
                          gsap.to(cylinders[index].scale, {y: 2.5, duration: 0.12, ease: 'power0.inOut'});
