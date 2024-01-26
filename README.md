@@ -1,5 +1,9 @@
 # newtons-cradle
 3D Pendulum Project Newton's Cradle
+![Scene 0 (00 49 35 43)](https://github.com/wolfkanglim/newtons-cradle/assets/74490365/54cbc53e-38c1-4452-80bc-ff94c0f5c1fb)
+
+![newton05-cross-total1_ 1 (00 08 46 01)](https://github.com/wolfkanglim/newtons-cradle/assets/74490365/793f171e-11c8-4d73-b0ed-7f52b418f19b)
+
 
 Five pendulums swing. Newton's Cradle Project. No 6
   #threejs #polyrhythms #lawsofmotion
